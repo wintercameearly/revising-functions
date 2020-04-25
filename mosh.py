@@ -50,7 +50,7 @@ check_driver_speed(100)
 
 def show_numbers(limit):
     # Function to show numbers between 0 and limit, as well as whether they are even or odd
-    numbers = range(0, limit+1, 1)
+    numbers = range(0, limit + 1, 1)
     for n in numbers:
         if n % 2 == 0:
             print(n, " EVEN")
@@ -63,7 +63,7 @@ show_numbers(6)
 
 def sum_of_multiples3(limit):
     # Function to show the sum of multiples of 3 or 5 between 0 and a limit
-    numbers = range(0, limit+1, 1)
+    numbers = range(0, limit + 1, 1)
     number_list = []
     for n in numbers:
         if n % 3 == 0 or n % 5 == 0:
@@ -77,14 +77,25 @@ sum_of_multiples3(20)
 
 def show_star(rows):
     # Function to print number of stars based on number of rows lol
-    stars = range(1, rows+1)
+    stars = range(1, rows + 1)
     for n in stars:
-        print("*"*stars[n-1])
+        print("*" * stars[n - 1])
 
 
 show_star(5)
 
+
 def print_prime_nos(limit):
+    # A function to print prime numbers between 0 and a limit
+    numbers = range(1, limit + 1, 1)
+    for n in numbers:
+        if n > 1:
+            for i in range(2, n):
+                if (n % i) == 0:
+                    break
+            else:
+                print(n)
 
 
+print_prime_nos(13)
 
